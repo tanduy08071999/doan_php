@@ -15,13 +15,11 @@ class CreateQuanTriViensTable extends Migration
     {
         Schema::create('quan_tri_vien', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ten_dang_nhap')->unique();
+            $table->string('ten_dang_nhap');
             $table->string('mat_khau');
             $table->string('ho_ten');
-            $table->rememberToken();
-            $table->softDeletes();
-
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -18,7 +18,7 @@
                                    <label for="userName">Lĩnh Vực<span class="text-danger">*</span></label>
                                     <select  name= "linhvucid"  class="selectpicker col-12" data-style="btn-light">
                                         @foreach($listlinhvuc as $ds)
-                                        <option value="{{$ds->id}}" >{{$ds->ten_linh_vuc}}</option>
+                                        <option value="{{$listlinhvuc->id}}" >{{$listlinhvuc->ten_linh_vuc}}</option>
                                         @endforeach
                                     </select>
                              	</div>

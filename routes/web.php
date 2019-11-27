@@ -27,7 +27,12 @@ Route::get('/', function(){
 // Route::get('dang-nhap' , 'QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
 // Route::middleware('auth')->group(function(){
 // 	//Linh Vuc
-	Route::group(['prefix'=>'linh-vuc'],function(){
+
+	Route::get('dang-nhap','QuanTriVienController@dangNhap')->name('dang-nhap');
+	Route::get('dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
+	Route::post('dang-nhap','QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
+	Route::middleware('auth')->group(function(){
+		Route::group(['prefix'=>'linh-vuc'],function(){ 
 			Route::get('danh-sach-linh-vuc','LinhVucController@index')->name('danh-sach');
 			Route::get('/','LinhVucController@index')->name('linh-vuc.danh-sach');
 			Route::get('them-linh-vuc','LinhVucController@create')->name('them-moi');
@@ -44,6 +49,10 @@ Route::get('/', function(){
 		Route::get('sua-cau-hoi/{id}','CauHoiController@show')->name('sua-ch');
 		Route::post('sua-cau-hoi-xl/{id}','CauHoiController@update')->name('sua-ch-xl');
 	});
+	});
+
+
+	
 	Route::group(['prefix'=>'goi-credit'],function(){
 		Route::get('danh-sach-goi-credit','GoiCreditController@index')->name('ds-goi-credit');
 		Route::get('them-goi-credit','GoiCreditController@create')->name('themmoi-goi-credit');

@@ -87,26 +87,24 @@ class QuanTriVienController extends Controller
     {
         return view('dang-nhap');
     }
-    
     public function xuLyDangNhap(Request $request)
     {
-        //$thongTin = $request->only(['ten_dang_nhap' , 'mat_khau']);
-        /*$qtv = QuanTriVien::where('ten_dang_nhap',$thongTin['ten_dang_nhap'])->first();
+        $thongTin = $request->only(['ten_dang_nhap','mat_khau']);
+        $qtv = QuanTriVien::where('ten_dang_nhap', $thongTin['ten_dang_nhap'])->first();
         if($qtv == null)
         {
-            return "Sai tên đăng nhập";
+            return "sai ten dang nhap";
         }
-        if(!Hash::check($thongTin['mat_khau'],$qtv->mat_khau))
+        if(!Hash::check($thongTin['mat_khau'], $qtv->mat_khau))
         {
-            return " Sai mật khẩu";
+            return "sai ten mat khau";
         }
         Auth::login($qtv);
-        */
-        return "Đăng Nhập Thành Công";
-   }
-   public function dangXuat()
+            return "Đăng nhập thành công";
+    }
+    public function dangXuat()
     {
         Auth::logout();
-        return redirect()->route('ten_dang_nhap');
+        return redirect()->route('dang-nhap');
     }
 }

@@ -8,12 +8,12 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico')}}">
 
         <!-- App css -->
-        <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -36,7 +36,7 @@
 
                                 <h5 class="auth-title">Sign In</h5>
 
-                                <form {{-- action="{{ route('xu-ly-dang-nhap') }}" --}} method="POST">
+                                <form action="{{ route('xu-ly-dang-nhap') }}" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label for="emailaddress">Tên Đăng Nhập</label>
@@ -45,8 +45,8 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label for="password">Mật Khẩu</label>
-                                        <input class="form-control" type="password" required="" id="mat_khau" name="mat_khau" >
+                                        <label for="password">Mật khẩu</label>
+                                        <input class="form-control" type="password" required="" id="mat_khau" name="mat_khau">
                                     </div>
 
                                     <div class="form-group mb-3">
@@ -106,10 +106,10 @@
         </footer>
 
         <!-- Vendor js -->
-        <script src="{{asset('assets/js/vendor.min.js')}}"></script>
+        <script src="{{ asset('assets/js/vendor.min.js')}}"></script>
 
         <!-- App js -->
-        <script src="{{asset('assets/js/app.min.js')}}"></script>
+        <script src="{{ asset('assets/js/app.min.js')}}"></script>
         
     </body>
 </html>

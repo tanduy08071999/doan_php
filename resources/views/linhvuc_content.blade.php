@@ -24,6 +24,7 @@
                                             <th>Id</th>
                                             <th>Tên Lĩnh Vực</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                 

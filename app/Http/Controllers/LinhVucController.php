@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\LinhVuc;
-
+use Illuminate\Support\Facades\Auth;
 class LinhVucController extends Controller
 {
     /**
@@ -15,9 +15,9 @@ class LinhVucController extends Controller
      */
     public function index()
     {
-        // return Auth::user();
-        $listlinhvuc = LinhVuc::all();
-        return view('linhvuc_content',compact('listlinhvuc'));
+        return Auth::user();
+        $listLinhVuc = LinhVuc::all();
+        return view('linhvuc_content',compact('listLinhVuc'));
     }
 
     /**
@@ -27,7 +27,8 @@ class LinhVucController extends Controller
      */
     public function create()
     {
-        return view('Them_Linh_Vuc');
+        $listLinhVuc = LinhVuc::all();
+        return view('Them_Linh_Vuc',compact('listLinhVuc'));
     }
 
     /**

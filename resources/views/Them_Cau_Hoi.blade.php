@@ -18,8 +18,8 @@
                                 <div class="form-group mt-1 dropdown bootstrap-select">
                                    <label for="userName">Lĩnh Vực<span class="text-danger">*</span></label>
                                     <select  name= "linhvucid" class="selectpicker col-12" data-style="btn-light">
-                                        @foreach($listlinhvuc as $ds)
-                                        <option value="{{$ds->id}}">{{$ds->linh_vuc_id}}</option>
+                                        @foreach($listlinhvuc as $linhVuc)
+                                        <option value="{{$linhVuc->id}}">{{$linhVuc->ten_linh_vuc}}</option>
                                         @endforeach
                                     </select>
                              	</div>
