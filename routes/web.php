@@ -33,8 +33,8 @@ Route::get('/', function(){
 	Route::post('dang-nhap','QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
 	Route::middleware('auth')->group(function(){
 		Route::group(['prefix'=>'linh-vuc'],function(){ 
-			Route::get('danh-sach-linh-vuc','LinhVucController@index')->name('danh-sach');
 			Route::get('/','LinhVucController@index')->name('linh-vuc.danh-sach');
+			Route::get('danh-sach-linh-vuc','LinhVucController@index')->name('danh-sach');
 			Route::get('them-linh-vuc','LinhVucController@create')->name('them-moi');
 			Route::post('them-linh-vuc-xl','LinhVucController@store')->name('them-moi-xl');
 			Route::get('sua-linh-vuc/{id}','LinhVucController@show')->name('sua-lv');
@@ -44,12 +44,12 @@ Route::get('/', function(){
 	Route::group(['prefix'=>'cau-hoi'],function(){
 		Route::get('danh-sach-cau-hoi','CauHoiController@index')->name('ds-cauhoi');
 		Route::get('them-cau-hoi','CauHoiController@create')->name('them-cauhoi');
-		Route::post('them-cau-hoi-xl','CauHoiController@store')->name('them-cauhoi-xl');
+		Route::post('them-cau-hoi','CauHoiController@store')->name('them-cauhoi-xl');
 		Route::get('xoa-cau-hoi/{id}','CauHoiController@destroy')->name('xoa-ch');
 		Route::get('sua-cau-hoi/{id}','CauHoiController@show')->name('sua-ch');
 		Route::post('sua-cau-hoi-xl/{id}','CauHoiController@update')->name('sua-ch-xl');
 	});
-	});
+});
 
 
 	

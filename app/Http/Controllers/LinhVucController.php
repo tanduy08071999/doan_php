@@ -15,7 +15,6 @@ class LinhVucController extends Controller
      */
     public function index()
     {
-        return Auth::user();
         $listLinhVuc = LinhVuc::all();
         return view('linhvuc_content',compact('listLinhVuc'));
     }

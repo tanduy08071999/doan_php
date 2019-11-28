@@ -100,7 +100,7 @@ class QuanTriVienController extends Controller
             return "sai ten mat khau";
         }
         Auth::login($qtv);
-            return "Đăng nhập thành công";
+            return redirect('/');
     }
     public function dangXuat()
     {

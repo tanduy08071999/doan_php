@@ -29,7 +29,7 @@
                                     </thead>
                                 
                                     <tbody>
-                                        @foreach($listlinhvuc as $ds)
+                                        @foreach($listLinhVuc as $ds)
                                         <tr>
                                             <td>{{ $ds->id }}</td>
                                             <td>{{ $ds->ten_linh_vuc }}</td>

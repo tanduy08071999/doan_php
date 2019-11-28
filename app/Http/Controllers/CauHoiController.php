@@ -26,7 +26,7 @@ class CauHoiController extends Controller
      */
     public function create()
     {
-        $listlinhvuc = CauHoi::all();
+        $listlinhvuc = LinhVuc::all();
         //$ls=CauHoi::all();
         return view('Them_Cau_Hoi',compact('listlinhvuc'));
  
@@ -41,7 +41,7 @@ class CauHoiController extends Controller
      */
     public function store(Request $request)
     {   
-        $listcauhoi = new CauHoi;
+        $listcauhoi = new CauHoi();
         $listcauhoi->noi_dung = $request->input('noidung');
         $listcauhoi->linh_vuc_id = $request->input('linhvucid');
         $listcauhoi->phuong_an_a = $request->input('phuongana');
