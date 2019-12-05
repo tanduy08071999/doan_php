@@ -27,22 +27,18 @@
                                             <th>Đáp Án</th>
                                             <th></th>
                                         </tr>
-                                    </thead>
-                                			
-                                			
-
-                                			
+                                    </thead>	
                                     <tbody>
                                     		@foreach($listcauhoi as $ds)
                                     		<tr>
-                                    			<td>{{$ds->id}}</td>
-                                                <td>{{$ds->noi_dung}}</td>
-                                                <td>{{$ds->linh_vuc_id}}</td>
-                                                <td>{{$ds->phuong_an_a}}</td>
-                                                <td>{{$ds->phuong_an_b}}</td>
-                                                <td>{{$ds->phuong_an_c}}</td>
-                                                <td>{{$ds->phuong_an_d}}</td>
-                                                <td>{{$ds->dap_an}}</td>
+                                    			<td>{{ $ds->id }}</td>
+                                                <td>{{ $ds->noi_dung }}</td>
+                                                <td>{{ $ds->linh_vuc_id }}</td>
+                                                <td>{{ $ds->phuong_an_A }}</td>
+                                                <td>{{ $ds->phuong_an_B }}</td>
+                                                <td>{{ $ds->phuong_an_C }}</td>
+                                                <td>{{ $ds->phuong_an_D }}</td>
+                                                <td>{{ $ds->dap_an }}</td>
                                                 <td>
                                                     <a href="{{route('sua-ch',['id'=>$ds->id])}}">
                                                     <button  type="button" class="btn btn-purple waves-effect waves-light"><i class="mdi mdi-pencil"></i></button>

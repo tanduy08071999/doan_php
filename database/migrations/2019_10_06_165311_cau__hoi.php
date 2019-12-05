@@ -23,7 +23,7 @@ class CauHoi extends Migration
              $table->string('phuong_an_D');
              $table->string('dap_an');
              $table->softDeletes();
-              $table->foreign('linh_vuc_id')->references('id')->on('Linh_Vuc')->onDelete('cascade');
+            $table->foreign('linh_vuc_id')->references('id')->on('Linh_Vuc')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -15,7 +15,6 @@
                                     <button type="button" class="btn btn-outline-primary waves-effect waves-light">Thêm Lĩnh Vực</button>
                                  </a>
                            </div>
-
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
 
                                     <thead>
