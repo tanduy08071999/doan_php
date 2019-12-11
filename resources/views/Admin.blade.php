@@ -365,9 +365,12 @@
                                     <li>
                                         <a href="{{route('them-moi')}}">Thêm Lĩnh Vực</a>
                                     </li>
-                                    <li>
-                                        
+                                    {{-- <li>
+                                        <a href="{{route('xoa-linh-vuc')}}">Xóa Lĩnh Vực</a>
                                     </li>
+                                    <li>
+                                        <a href="{{route('sua-lv')}}">Sửa Lĩnh Vực</a>
+                                    </li> --}}
                                 </ul>
                             </li>
 
@@ -376,222 +379,65 @@
                                     <i class="la la-cube"></i>Câu Hỏi<div class="arrow-down"></div></a>
                                 <ul class="submenu">
                                     <li>
-                                        <a href="apps-calendar.html">Calendar</a>
+                                        <a href="apps-calendar.html">Thêm Câu Hỏi</a>
                                     </li>
                                     <li>
-                                        <a href="apps-contacts.html">Contacts</a>
+                                        <a href="apps-contacts.html">Xóa Câu Hỏi</a>
                                     </li>
                                     <li>
-                                        <a href="apps-tickets.html">Tickets</a>
+                                        <a href="apps-tickets.html">Sửa Câu Hỏi</a>
                                     </li>
-                                    <li class="has-submenu">
-                                        <a href="#">Email <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="email-inbox.html">Inbox</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-read.html">Read Email</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-compose.html">Compose Email</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-templates.html">Email Templates</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                             </li>
 
                             <li class="has-submenu">
-                                <a href="#"> <i class="la la-clone"></i>Gói Credit <div class="arrow-down"></div></a>
+                                <a href="#"> <i class="la la-clone"></i>Người Chơi <div class="arrow-down"></div></a>
                                 <ul class="submenu">
                                     <li>
-                                    <a href="{{route('ds-cauhoi')}}">                                   
-                                     </li>
-                                    <li>
-                                        <a href="layouts-menubar-light.html">Menubar Light</a>
+                                        <a href="layouts-menubar-light.html">Admin 1</a>
                                     </li>
                                     <li>
-                                        <a href="layouts-center-menu.html">Center Menu</a>
+                                        <a href="layouts-center-menu.html">Admin 2</a>
                                     </li>
                                     <li>
-                                        <a href="layouts-preloader.html">Preloader</a>
+                                        <a href="layouts-preloader.html">Admin 3</a>
                                     </li>
                                     <li>
-                                        <a href="layouts-normal-header.html">Unsticky Header</a>
+                                        <a href="layouts-normal-header.html">Admin 4</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="layouts-boxed.html">Boxed</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </li>
 
                             <li class="has-submenu">
-                                <a href="#"> <i class="la la-briefcase"></i>Elements <div class="arrow-down"></div></a>
-                                <ul class="submenu megamenu">
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="ui-buttons.html">Buttons</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-cards.html">Cards</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-tabs-accordions.html">Tabs & Accordions</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-modals.html">Modals</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-progress.html">Progress</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="ui-notifications.html">Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-general.html">General UI</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-typography.html">Typography</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-grid.html">Grid</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                        
-                                </ul>
+                                <a href="#"> <i class="la la-briefcase"></i>Gói Credit</a>
+                                
                             </li>
 
                             <li class="has-submenu">
                                 <a href="#">
-                                    <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
+                                    <i class="la la-diamond"></i>Thùng Rác<div class="arrow-down"></div></a>
                                 <ul class="submenu">
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-bookmark mr-1"></i> Forms <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="forms-elements.html">General Elements</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-advanced.html">Advanced</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-validation.html">Validation</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-pickers.html">Pickers</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-wizard.html">Wizard</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-masks.html">Masks</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-summernote.html">Summernote</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-quilljs.html">Quilljs Editor</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-file-uploads.html">File Uploads</a>
-                                            </li>
-                                        </ul>
+                                        <a href="{{route ('linh-vuc-trash.danh-sach')}}"><i class="fe-bookmark mr-1"></i> Lĩnh Vực</a>
+                                  
                                     </li>
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-grid mr-1"></i> Tables <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="tables-basic.html">Basic Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-datatables.html">Data Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-editable.html">Editable Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-responsive.html">Responsive Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-tablesaw.html">Tablesaw Tables</a>
-                                            </li>
-                                        </ul>
+                                        <a href=" {{route ('cau-hoi-trash.danh-sach') }}"><i class="fe-grid mr-1"></i> Câu Hỏi</a>
+                                       
                                     </li>
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Charts <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="charts-apex.html">Apex Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-flot.html">Flot Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-morris.html">Morris Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-chartjs.html">Chartjs Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-brite.html">Brite Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-chartist.html">Chartist Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-peity.html">Peity Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-sparklines.html">Sparklines Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-knob.html">Jquery Knob Charts</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Người Chơi</a>
+                                      
                                     </li>
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-cpu mr-1"></i> Icons <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="icons-feather.html">Feather Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-lineawesome.html">Line Awesome</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-mdi.html">Material Design Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-font-awesome.html">Font Awesome</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-simple-line.html">Simple Line</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#"><i class="fe-cpu mr-1"></i> Gói Credit</a>
+                                     
                                     </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="fe-map mr-1"></i> Maps <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="maps-google.html">Google Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="maps-vector.html">Vector Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="maps-mapael.html">Mapael Maps</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                             </li>
 

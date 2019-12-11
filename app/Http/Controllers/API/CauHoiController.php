@@ -19,15 +19,5 @@ class CauHoiController extends Controller
     	return response()->json($result);
     }
 
-    public function layCH($id)
-    {
-        $cauHoi = CauHoi::find($id);
-        $result = [
-            'success' => true,
-            'data' => $cauHoi
-        ];
-
-        return response()->json($result);
-    }
 
 }

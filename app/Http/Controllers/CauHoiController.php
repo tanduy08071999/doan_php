@@ -109,7 +109,25 @@ class CauHoiController extends Controller
     public function destroy($id)
     {
         $listcauhoi = CauHoi::find($id);
-        $listcauhoi -> delete();
+        $listcauhoi->delete();
         return redirect('cau-hoi/danh-sach-cau-hoi');
     }
+    public function forceDelete($id)
+    {
+        $cauHoi = CauHoi::onlyTrashed()->find($id);
+        $cauHoi->forceDelete();
+        return redirect()->route('cau-hoi-trash.danh-sach');
+    }
+    public function restore($id)
+    {
+        $cauHoi = CauHoi::onlyTrashed()->get()->find($id);
+        $cauHoi->restore();
+        return redirect()->route('cau-hoi-trash.danh-sach');
+    }
+    public function onlyTrashed()
+    {
+        $listCauHoi = CauHoi::onlyTrashed()->get();
+        return view('thung-rac.cau-hoi-thung-rac', compact('listCauHoi'));
+    }
+
 }

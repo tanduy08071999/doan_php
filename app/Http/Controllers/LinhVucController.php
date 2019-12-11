@@ -99,4 +99,21 @@ class LinhVucController extends Controller
         
         return redirect('linh-vuc/danh-sach-linh-vuc');
     }
+    public function forceDelete($id)
+    {
+        $linhVuc = LinhVuc::onlyTrashed()->find($id);
+        $linhVuc->forceDelete();
+        return redirect()->route('linh-vuc-trash.danh-sach');
+    }
+    public function restore($id)
+    {
+        $linhVuc = LinhVuc::onlyTrashed()->get()->find($id);
+        $linhVuc->restore();
+        return redirect()->route('linh-vuc-trash.danh-sach');
+    }
+    public function onlyTrashed()
+    {
+        $listLinhVuc = LinhVuc::onlyTrashed()->get();
+        return view('thung-rac.linh-vuc-thung-rac', compact('listLinhVuc'));
+    }
 }
