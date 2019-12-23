@@ -18,19 +18,19 @@
                                    <label for="userName">Lĩnh Vực<span class="text-danger">*</span></label>
                                     <select  name= "linhvucid"  class="selectpicker col-12" data-style="btn-light">
                                         @foreach($listlinhvuc as $ds)
-                                        <option value="{{$listlinhvuc->id}}" >{{$listlinhvuc->ten_linh_vuc}}</option>
+                                        <option value="{{$ds->id}}" >{{$ds->ten_linh_vuc}}</option>
                                         @endforeach
                                     </select>
                              	</div>
                   	           	<div>
                              		 <label for="userName">Phương án A<span class="text-danger">*</span></label>
-                                    <input type="text"  value="{{$listcauhoi->phuong_an_a}}" name="phuongana" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
+                                    <input type="text"  value="{{$listcauhoi->phuong_an_A}}" name="phuongana" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
                                     <label for="userName">Phương án B<span class="text-danger">*</span></label>
-                                    <input type="text"  value="{{$listcauhoi->phuong_an_b}}" name="phuonganb" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
+                                    <input type="text"  value="{{$listcauhoi->phuong_an_B}}" name="phuonganb" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
                                     <label for="userName">Phương án C<span class="text-danger">*</span></label>
-                                    <input type="text"  value="{{$listcauhoi->phuong_an_c}}" name="phuonganc" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
+                                    <input type="text"  value="{{$listcauhoi->phuong_an_C}}" name="phuonganc" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
                                     <label for="userName">Phương án D<span class="text-danger">*</span></label>
-                                    <input type="text"  value="{{$listcauhoi->phuong_an_d}}" name="phuongand" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
+                                    <input type="text"  value="{{$listcauhoi->phuong_an_D}}" name="phuongand" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
                                     <label for="userName">Đáp Án<span class="text-danger">*</span></label>
                                     <input type="text"  value="{{$listcauhoi->dap_an}}" name="dapan" parsley-trigger="change" required="" placeholder="Enter user name" class="form-control" id="userName">
                              	</div>

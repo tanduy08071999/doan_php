@@ -61,12 +61,14 @@ Route::get('/', function(){
 		Route::get('sua-goi-credit/{id}','GoiCreditController@show')->name('update-goi-credit');
 		Route::post('sua-goi-credit-xl/{id}','GoiCreditController@update')->name('update-goi-credit-xl');
 	});	
+
 	Route::prefix('cau-hoi-trash')->group(function() {
 	Route::name('cau-hoi-trash.')->group(function() {
 		Route::get('/', 'CauHoiController@onlyTrashed')->name('danh-sach');
 		Route::get('khoi-phuc/{id}', 'CauHoiController@restore')->name('khoi-phuc');
 		Route::get('xoa/{id}', 'CauHoiController@forceDelete')->name('xoa');
 	}); 
+ });
 	Route::prefix('linh-vuc-trash')->group(function() {
 	Route::name('linh-vuc-trash.')->group(function() {
 		Route::get('/', 'LinhVucController@onlyTrashed')->name('danh-sach');
@@ -75,4 +77,3 @@ Route::get('/', function(){
 	}); 
 });
 
- });

@@ -95,8 +95,7 @@ class LinhVucController extends Controller
     public function destroy($id)
     {
         $linhVuc = LinhVuc::find($id);
-        $linhVuc->delete();
-        
+        $linhVuc->delete(); 
         return redirect('linh-vuc/danh-sach-linh-vuc');
     }
     public function forceDelete($id)
