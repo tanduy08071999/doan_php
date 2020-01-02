@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use illuminate\support\Facades\Session;
+use illuminate\support\Facades\Validator;
+use App\GoiCredit;
+use illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class GoiCreditController extends Controller
 {
@@ -13,7 +18,8 @@ class GoiCreditController extends Controller
      */
     public function index()
     {
-        //
+        $listGoiCredit = GoiCredit::all();
+        return view('goicredit', compact('listGoiCredit'));
     }
 
     /**
@@ -23,7 +29,8 @@ class GoiCreditController extends Controller
      */
     public function create()
     {
-        //
+        $listGoiCredit = GoiCredit::all();
+        return view('formcredit',compact('listGoiCredit'));
     }
 
     /**
@@ -34,7 +41,13 @@ class GoiCreditController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $goiCredit = new GoiCredit;
+        $goiCredit->ten_goi = $request->ten_goi;
+        $goiCredit->credit = $request->credit;
+        $goiCredit->so_tien = $request->so_tien;
+        $goiCredit->save();
+
+        return redirect()->route('goi-credit.danh-sach');
     }
 
     /**
@@ -45,7 +58,8 @@ class GoiCreditController extends Controller
      */
     public function show($id)
     {
-        //
+        $goiCredit = GoiCredit::find($id);
+        return view('goi-credit.formcredit', compact('goiCredit'));
     }
 
     /**
@@ -56,7 +70,8 @@ class GoiCreditController extends Controller
      */
     public function edit($id)
     {
-        //
+         $goiCredit = GoiCredit::find($id);
+        return view('formcredit', compact('goiCredit'));
     }
 
     /**
@@ -68,7 +83,13 @@ class GoiCreditController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $goiCredit = GoiCredit::find($id);
+        $goiCredit->ten_goi = $request->ten_goi;
+        $goiCredit->credit = $request->credit;
+        $goiCredit->so_tien = $request->so_tien;
+        $goiCredit->save();
+
+        return redirect()->route('goi-credit.danh-sach');
     }
 
     /**
@@ -79,6 +100,26 @@ class GoiCreditController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $goiCredit = GoiCredit::find($id);
+        $goiCredit->delete();
+
+        return redirect()->route('goi-credit.danh-sach');
+    }
+    public function forceDelete($id)
+    {
+        $goiCredit = GoiCredit::onlyTrashed()->find($id);
+        $goiCredit->forceDelete();
+        return redirect()->route('goi-credit-trash.danh-sach');
+    }
+    public function restore($id)
+    {
+        $goiCredit = GoiCredit::onlyTrashed()->get()->find($id);
+        $goiCredit->restore();
+        return redirect()->route('goi-credit-trash.danh-sach');
+    }
+    public function onlyTrashed()
+    {
+        $listGoiCredit = GoiCredit::onlyTrashed()->get();
+        return view('thung-rac.credit-thung-rac', compact('listGoiCredit'));
     }
 }

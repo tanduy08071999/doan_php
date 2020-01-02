@@ -53,14 +53,24 @@ Route::get('/', function(){
 
 
 	
-	Route::group(['prefix'=>'goi-credit'],function(){
-		Route::get('danh-sach-goi-credit','GoiCreditController@index')->name('ds-goi-credit');
-		Route::get('them-goi-credit','GoiCreditController@create')->name('themmoi-goi-credit');
-		Route::post('them-goi-credit-xl','GoiCreditController@store')->name('themmoi-goi-credit-xl');
-		Route::get('xoa-goi-credit/{id}','GoiCreditController@destroy')->name('xoa-goi-credit');
-		Route::get('sua-goi-credit/{id}','GoiCreditController@show')->name('update-goi-credit');
-		Route::post('sua-goi-credit-xl/{id}','GoiCreditController@update')->name('update-goi-credit-xl');
-	});	
+	Route::prefix('goi-credit')->group(function() {
+	Route::name('goi-credit.')->group(function() {
+		Route::get('/', 'GoiCreditController@index')->name('danh-sach');
+		Route::get('them-moi', 'GoiCreditController@create')->name('them-moi');
+		Route::post('them-moi', 'GoiCreditController@store')->name('xl-them-moi');
+		Route::get('cap-nhat/{id}', 'GoiCreditController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}', 'GoiCreditController@update')->name('xl-cap-nhat');
+		Route::get('xoa/{id}', 'GoiCreditController@destroy')->name('xoa');
+	});
+});
+
+Route::prefix('goi-credit-trash')->group(function() {
+	Route::name('goi-credit-trash.')->group(function() {
+		Route::get('/', 'GoiCreditController@onlyTrashed')->name('danh-sach');
+		Route::get('khoi-phuc/{id}', 'GoiCreditController@restore')->name('khoi-phuc');
+		Route::get('xoa/{id}', 'GoiCreditController@forceDelete')->name('xoa');
+	}); 
+});
 
 	Route::prefix('cau-hoi-trash')->group(function() {
 	Route::name('cau-hoi-trash.')->group(function() {
@@ -75,5 +85,28 @@ Route::get('/', function(){
 		Route::get('khoi-phuc/{id}', 'LinhVucController@restore')->name('khoi-phuc');
 		Route::get('xoa/{id}', 'LinhVucController@forceDelete')->name('xoa');
 	}); 
+
 });
+
+	Route::prefix('nguoi-choi')->group(function() {
+	Route::name('nguoi-choi.')->group(function() {
+		Route::get('/', 'NguoiChoiController@index')->name('danh-sach');
+		Route::get('them-moi','NguoiChoiController@create')->name('them-moi');
+		Route::post('them-moi','NguoiChoiController@store')->name('xl-them-moi');
+		Route::get('xoa/{id}','NguoiChoiController@destroy')->name('xoa');
+		Route::get('cap-nhat/{id}','NguoiChoiController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}','NguoiChoiController@update')->name('xl-cap-nhat');
+	});	
+});
+
+
+	Route::prefix('nguoi-choi-trash')->group(function() {
+	Route::name('nguoi-choi-trash.')->group(function() {
+		Route::get('/', 'NguoiChoiController@onlyTrashed')->name('danh-sach');
+		Route::get('khoi-phuc/{id}', 'NguoiChoiController@restore')->name('khoi-phuc');
+		Route::get('xoa/{id}', 'NguoiChoiController@forceDelete')->name('xoa');
+	}); 
+
+});
+
 

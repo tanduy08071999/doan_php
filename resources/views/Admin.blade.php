@@ -392,7 +392,7 @@
                             </li>
 
                             <li class="has-submenu">
-                                <a href="#"> <i class="la la-clone"></i>Người Chơi <div class="arrow-down"></div></a>
+                                <a href="{{route('nguoi-choi.danh-sach')}}"> <i class="la la-clone"></i>Người Chơi <div class="arrow-down"></div></a>
                                 <ul class="submenu">
                                     <li>
                                         <a href="layouts-menubar-light.html">Admin 1</a>
@@ -413,7 +413,7 @@
                             </li>
 
                             <li class="has-submenu">
-                                <a href="#"> <i class="la la-briefcase"></i>Gói Credit</a>
+                                <a href="{{route('goi-credit.danh-sach')}}"> <i class="la la-briefcase"></i>Gói Credit<div class="arrow-down"></div></a>
                                 
                             </li>
 
@@ -430,11 +430,11 @@
                                        
                                     </li>
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Người Chơi</a>
+                                        <a href="{{route ('nguoi-choi-trash.danh-sach')}}"><i class="fe-bar-chart-2 mr-1"></i> Người Chơi</a>
                                       
                                     </li>
                                     <li class="has-submenu">
-                                        <a href="#"><i class="fe-cpu mr-1"></i> Gói Credit</a>
+                                        <a href="{{route ('goi-credit-trash.danh-sach')}}"><i class="fe-cpu mr-1"></i> Gói Credit</a>
                                      
                                     </li>
                                     

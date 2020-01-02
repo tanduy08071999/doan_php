@@ -4,32 +4,35 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Danh sách gói credit</h4>
-                <a href="{{route('goi-credit.them-moi')}}" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+                <h4 class="header-title">Danh sách Người Chơi </h4>
                 <br>
-                <table id="goi-credit-table" class="table dt-responsive nowrap">
+                <table id="nguoi-choi-table" class="table dt-responsive nowrap">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tên Gói</th>
+                            <th>Tên Đăng Nhập</th>
+                            <th>Email</th>
+                            <th>Điểm Cao Nhất</th>
                             <th>Credit</th>
-                            <th>Số tiền</th>
+                            <th></th>
                         </tr>
                     </thead>
-                
-                
                     <tbody>
-                        @foreach ($listGoiCredit as $ds)
+                        @foreach ($listNguoiChoi as $nguoiChoi)
                         <tr>
-                            <td>{{ $ds->id }}</td>
-                            <td>{{ $ds->Ten_goi }}</td>
-                            <td>{{ $ds->Credit }}</td>
-                            <td>{{ $ds->So_tien }}</td>
+                            <td>{{ $nguoiChoi->id }}</td>
+                            <td>{{ $nguoiChoi->ten_dang_nhap }}</td>
+                            <td>{{ $nguoiChoi->mat_khau }}</td>
+                            <td>{{ $nguoiChoi->email }}</td>
+                            <td>{{ $nguoiChoi->hinh_dai_dien }}</td>
+                            <td>{{ $nguoiChoi->diem_cao_nhat }}</td>
+                            <td>{{ $nguoiChoi->credit }}</td>
                             <td>
-                                <a href="{{route('goi-credit.cap-nhat', ['id' => $ds->id])}}" 
+                                <a href="{{ route ('nguoi-choi-trash.khoi-phuc',['id' => $nguoiChoi->id]) }}" 
                                 class="btn btn-success waves-effect waves-light">
                                 <i class="mdi mdi-grease-pencil"></i></a>
-                                <a href="{{route('goi-credit.xoa', ['id' => $ds->id])}}" class="btn btn-danger waves-effect waves-light">
+                                
+                                <a href="{{ route ('nguoi-choi-trash.xoa',['id' => $nguoiChoi->id]) }}" class="btn btn-danger waves-effect waves-light">
                                 <i class="mdi mdi-trash-can-outline"></i></a>
                             </td>
                         </tr>
@@ -72,7 +75,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#goi-credit-table").DataTable({
+        $("#nguoi-choi-table").DataTable({
             language:{
                 paginate:{
                 previous:"<i class='mdi mdi-chevron-left'>",
